@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Preview Card</title>
+  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  
+
+  <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --Yellow: hsl(47, 88%, 63%);
+        --White: hsl(0, 0%, 100%);
+        --Gray_500: hsl(0, 0%, 42%);
+        --Gray_950: hsl(0, 0%, 7%);
+        --radius:15px;
+        --gap:20px;
+        font-size: 16px;
+      }
+      
+     @font-face {
+       font-family:'FigtreeBold';
+       src : url('assets/fonts/static/Figtree-ExtraBold.ttf');
+       font-weight: normal;
+     }
+     @font-face {
+       font-family:'FigtreeLight';
+       src : url('assets/fonts/static/Figtree-SemiBold.ttf');
+       font-weight: bold;
+     }
+     
+     body{
+       font-family: 'FigtreeLight' , Sans-Serif;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       border-radius: ;
+     }
+     
+     .card{
+       width: 375px;
+       height: 550px;
+       border-radius: var(--radius);
+       border: solid ;
+       
+       padding: var(--gap);
+       box-shadow: 9px 9px var(--Gray_950);
+     }
+     .card > *{
+       margin-bottom: var(--gap);
+       display: block;
+     }
+     
+     .card > .img{
+       border-radius: var(--radius);
+       overflow: hidden;
+     }
+     .card .card_progress{
+       display: inline-block;
+       box-sizing: unset;
+       padding: 8px 15px;
+       background-color: var(--Yellow);
+       border-radius:calc(var(--radius) / 3);
+       font-family: 'FigtreeBold';
+     }
+     .card .card_date{
+       font-size: .8;
+       color:var(--Gray_950);
+     }
+     .card .card_link{
+       text-decoration: none;
+       color: black ;
+       font-size:1.5rem;
+       font-weight: 500;
+       font-family: 'FigtreeBold';
+     }
+     .card .card_link:hover{
+       color: var(--Yellow);
+     }
+      .card .card_description{
+       color: var(--Gray_500);
+     }
+     .card .card_profile{
+       display: flex;
+       gap:var(--gap);
+       align-items: center;
+       margin-top: 30px;
+       margin-bottom: 0;
+     }
+     .card_profile img{
+       height: 40px;
+     }
+     .card_profile .name{
+       font-family: 'FigtreeBold';
+     }
+     
+     @media screen only and (min-width:700px){
+       
+     }
+  </style>
+  
+</head>
+<body>
+      <div class="card" role="region" aria-labelby="Blog preview card">
+          <div class="img">
+            <img src="assets/images/illustration-article.svg"
+            alt="illustration-article">
+          </div>
+          
+          <span class="card_progress">Learning</span>
+          <p class="card_date">Published 21 Dec 2023</p>
+          
+          <a href="#" class="card_link">HTML & CSS foundation</a>
+          
+          <p class="card_description">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+          
+          <div class="card_profile">
+            <img src="assets/images/image-avatar.webp" alt="profile picture">
+            
+            <span class="name">Greg Hooper</span>
+          </div>
+      </div>
+</body>
+</html>
